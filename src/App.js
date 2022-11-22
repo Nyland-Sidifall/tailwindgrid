@@ -13,6 +13,7 @@ function App() {
   const [question, setQuestion] = useState("");
   const [punchline, setPunchline] = useState("Click for Joke");
   const [lineSwitch, setLineSwitch] = useState(false);
+  const [firstClick, setFirstClick] = useState(false);
 
   useEffect(() => {
     fetch("https://backend-omega-seven.vercel.app/api/getjoke")
@@ -71,22 +72,22 @@ function App() {
         <div className="grid my-4 grid-cols-4 grid-rows-2 gap-4">
           <div className="bg-[#FFE6A7] row-span-2 text-transparent">*</div>
           <div
-            className="bg-[#6F1D1B] grid items-center hover:scale-110 transition-all ease-in-out"
+            className="bg-[#6F1D1B] grid items-center hover:scale-110 transition-all ease-in-out h-48"
             onClick={() => {
               setLineSwitch(!lineSwitch);
             }}
           >
             <div className="p-2">
               {lineSwitch ? (
-                <p className="text-s text-white hover:cursor-pointer font-bold">
+                <p className="base:text-lg sm:text-sm text-white hover:cursor-pointer font-bold ">
                   {punchline}
                 </p>
               ) : (
                 <div>
-                  <p className="text-s text-white hover:cursor-pointer">
+                  <p className="base:text-lg sm:text-sm text-white hover:cursor-pointer">
                     Click For Random Programmer Joke
                   </p>
-                  <p className="text-xl text-white hover:cursor-pointer font-bold">
+                  <p className="base:text-xl sm:text-lg text-white hover:cursor-pointer font-bold">
                     {question}
                   </p>
                 </div>
