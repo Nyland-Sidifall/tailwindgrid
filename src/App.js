@@ -146,7 +146,7 @@ function App() {
             </div>
           </div>
           <div
-            className="bg-[#F27143] text-transparent hover:cursor-pointer"
+            className=" bg-[#FFE6A7] md:bg-[#F27143] text-transparent hover:cursor-pointer"
             onClick={playClap}
           ></div>
           <div
