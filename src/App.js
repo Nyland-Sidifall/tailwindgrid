@@ -66,14 +66,26 @@ function App() {
               {emoji}
             </p>
           </div>
-          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center">
-            <p className="text-3xl">Java</p>
+          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
+            <img
+              className="h-32 p-4 hover:animate-skip"
+              src="./java.svg"
+              alt="Java"
+            />
           </div>
-          <div className="bg-[#432818] text-white col-span-1 row-span-8 grid place-items-center">
-            <p className="text-3xl">Python</p>
+          <div className="bg-[#432818] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
+            <img
+              className="h-32 p-4 hover:animate-skip"
+              src="./python.svg"
+              alt="Python"
+            />
           </div>
-          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center">
-            <p className="text-3xl">C++</p>
+          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
+            <img
+              className="h-32 p-4 hover:animate-skip"
+              src="./c++.svg"
+              alt="C++"
+            />
           </div>
           <div
             className="bg-[#FFE6A7] col-span-3 row-span-5 grid place-items-center hover:cursor-pointer hover:scale-110 transition-all ease-in-out"
@@ -126,7 +138,7 @@ function App() {
             }}
           >
             <div className="grid  place-items-center">
-              <FaInstagramSquare className="text-6xl text-white hover:animate-skip ease-in-out" />
+              <FaInstagramSquare className="text-8xl text-white hover:animate-skip ease-in-out" />
             </div>
           </div>
           <div
@@ -141,7 +153,7 @@ function App() {
             }}
           >
             <div className="grid place-items-center">
-              <FaLinkedin className="text-6xl text-white content-center hover:animate-skip ease-in-out" />
+              <FaLinkedin className="text-8xl text-white content-center hover:animate-skip ease-in-out" />
             </div>
           </div>
           <div
