@@ -13,7 +13,9 @@ function App() {
   const [question, setQuestion] = useState("");
   const [punchline, setPunchline] = useState("Click for Joke");
   const [lineSwitch, setLineSwitch] = useState(false);
-  const [firstClick, setFirstClick] = useState(false);
+
+  let audio = new Audio("./audio.mp3");
+  let audio2 = new Audio("./audio2.wav");
 
   useEffect(() => {
     fetch("https://backend-omega-seven.vercel.app/api/getjoke")
@@ -25,6 +27,16 @@ function App() {
       });
   }, []);
 
+  const playMusic = () => {
+    audio.play();
+  };
+  const pauseMusic = () => {
+    audio.pause();
+  };
+  const playClap = () => {
+    audio2.play();
+  };
+
   return (
     <div className="App bg-[#FBFBF1]">
       <div className="m-10">
@@ -35,9 +47,13 @@ function App() {
           <div className="bg-[#FFE6A7] text-transparent">*</div>
         </div>
 
-        <div class="my-4 grid grid-flow-col hover:scale-105 transition-all">
+        <div class="transform my-4 grid grid-flow-col hover:scale-105 transition-all">
           <div className="bg-[#FFE6A7] col-span-2 row-span-3 grid place-items-center">
-            <img className="p-4" src="/Girl_Tech_Geek_logo.webp" alt="Logo" />
+            <img
+              className="p-4 hover:animate-skip"
+              src="/Girl_Tech_Geek_logo.webp"
+              alt="Logo"
+            />
           </div>
         </div>
 
@@ -46,7 +62,9 @@ function App() {
             className="bg-[#F27143] col-span-1 row-span-6 grid place-items-center hover:cursor-pointer hover:scale-110 transition-all"
             onClick={changeEmoji}
           >
-            <p className="text-8xl transition-all ease-in-out">{emoji}</p>
+            <p className="text-8xl transition-all hover:animate-skip ease-in-out">
+              {emoji}
+            </p>
           </div>
           <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center">
             <p className="text-3xl">Java</p>
@@ -65,36 +83,41 @@ function App() {
                 "https://girltechgeek.org/products/tech-coaching";
             }}
           >
-            <p className="text-xl font-bold">Get Tech Coaching Today!</p>
+            <p className="text-xl font-bold hover:animate-skip ease-in-out hover:text-gray-600">
+              Get Tech Coaching Today!
+            </p>
           </div>
         </div>
 
         <div className="grid my-4 grid-cols-4 grid-rows-2 gap-4">
           <div className="bg-[#FFE6A7] row-span-2 text-transparent">*</div>
           <div
-            className="bg-[#6F1D1B] grid items-center hover:scale-110 transition-all ease-in-out h-48"
+            className="bg-[#6F1D1B] grid items-center hover:scale-110 hover:cursor-pointer transition-all ease-in-out h-48"
             onClick={() => {
               setLineSwitch(!lineSwitch);
             }}
           >
-            <div className="p-2">
+            <div className="p-2 hover:animate-skip ease-in-out">
               {lineSwitch ? (
                 <p className="base:text-lg sm:text-sm text-white hover:cursor-pointer font-bold ">
                   {punchline}
                 </p>
               ) : (
-                <div>
-                  <p className="base:text-lg sm:text-sm text-white hover:cursor-pointer">
+                <div className="hover:animate-skip ease-in-out">
+                  <p className="base:text-lg sm:text-sm text-white">
                     Click For Random Programmer Joke
                   </p>
-                  <p className="base:text-xl sm:text-lg text-white hover:cursor-pointer font-bold">
+                  <p className="base:text-xl sm:text-lg text-white font-bold">
                     {question}
                   </p>
                 </div>
               )}
             </div>
           </div>
-          <div className="bg-[#F27143] text-transparent">2</div>
+          <div
+            className="bg-[#F27143] hover:cursor-pointer"
+            onClick={playMusic}
+          ></div>
           <div
             className="bg-[#6F1D1B] grid items-center hover:scale-110 hover:cursor-pointer transition-all ease-in-out"
             onClick={(e) => {
@@ -103,10 +126,13 @@ function App() {
             }}
           >
             <div className="grid  place-items-center">
-              <FaInstagramSquare className="text-6xl text-white" />
+              <FaInstagramSquare className="text-6xl text-white hover:animate-skip ease-in-out" />
             </div>
           </div>
-          <div className="bg-[#F27143] text-transparent">4</div>
+          <div
+            className="bg-[#F27143] text-transparent hover:cursor-pointer"
+            onClick={playClap}
+          ></div>
           <div
             className="bg-[#432818] grid items-center hover:scale-110 hover:cursor-pointer transition-all ease-in-out"
             onClick={(e) => {
@@ -115,10 +141,13 @@ function App() {
             }}
           >
             <div className="grid place-items-center">
-              <FaLinkedin className="text-6xl text-white content-center" />
+              <FaLinkedin className="text-6xl text-white content-center hover:animate-skip ease-in-out" />
             </div>
           </div>
-          <div className="bg-[#F27143] text-transparent">6</div>
+          <div
+            className="bg-[#F27143] text-transparent hover:cursor-pointer"
+            onClick={pauseMusic}
+          ></div>
         </div>
 
         <div class="grid my-4 grid-cols-4 grid-rows-1 gap-4">
