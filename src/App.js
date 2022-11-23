@@ -105,7 +105,7 @@ function App() {
           </div>
         </div>
 
-        <div className="grid my-4 grid-cols-4 grid-rows-2 gap-4">
+        <div className="grid my-4 grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4">
           <div className="bg-[#FFE6A7] row-span-2 text-transparent">*</div>
           <div
             className="bg-[#6F1D1B] grid items-center hover:scale-110 hover:cursor-pointer transition-all ease-in-out h-48"
