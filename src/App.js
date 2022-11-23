@@ -62,7 +62,7 @@ function App() {
             className="bg-[#F27143] col-span-1 row-span-6 grid place-items-center hover:cursor-pointer hover:scale-110 transition-all"
             onClick={changeEmoji}
           >
-            <p className="text-8xl transition-all hover:animate-skip ease-in-out">
+            <p className="text-5xl sm:text-6xl md:text-7xl lg:text-10xl xl:text-12xl transform transition-all hover:animate-skip ease-in-out">
               {emoji}
             </p>
           </div>
@@ -74,28 +74,32 @@ function App() {
             />
           </div>
           <div className="bg-[#432818] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
-            <img
-              className="h-32 p-4 hover:animate-skip"
-              src="./python.svg"
-              alt="Python"
-            />
+            <div className="grid place-items-center">
+              <img
+                className="h-32 p-4 hover:animate-skip "
+                src="./python.svg"
+                alt="Python"
+              />
+            </div>
           </div>
-          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
-            <img
-              className="h-32 p-4 hover:animate-skip"
-              src="./c++.svg"
-              alt="C++"
-            />
+          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all flex items-center justify-center">
+            <div className="grid place-items-center">
+              <img
+                className="h-32 p-4 hover:animate-skip"
+                src="./c++.svg"
+                alt="C++"
+              />
+            </div>
           </div>
           <div
-            className="bg-[#FFE6A7] col-span-3 row-span-5 grid place-items-center hover:cursor-pointer hover:scale-110 transition-all ease-in-out"
+            className="bg-[#FFE6A7] col-span-3 row-span-5 grid place-items-center hover:scale-110 hover:cursor-pointer transition-all ease-in-out"
             onClick={(e) => {
               e.preventDefault();
               window.location.href =
                 "https://girltechgeek.org/products/tech-coaching";
             }}
           >
-            <p className="text-xl font-bold hover:animate-skip ease-in-out hover:text-gray-600">
+            <p className="break-words text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl font-bold font-mono hover:text-gray-600 hover:animate-skip">
               Get Tech Coaching Today!
             </p>
           </div>
@@ -109,17 +113,17 @@ function App() {
               setLineSwitch(!lineSwitch);
             }}
           >
-            <div className="p-2 hover:animate-skip ease-in-out">
+            <div className="p-2 hover:animate-skip ease-in-out grow">
               {lineSwitch ? (
-                <p className="base:text-lg sm:text-sm text-white hover:cursor-pointer font-bold ">
+                <p className="break-words text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl text-white font-bold font-mono ">
                   {punchline}
                 </p>
               ) : (
                 <div className="hover:animate-skip ease-in-out">
-                  <p className="base:text-lg sm:text-sm text-white">
+                  <p className=" break-words text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl  text-white font-mono">
                     Click For Random Programmer Joke
                   </p>
-                  <p className="base:text-xl sm:text-lg text-white font-bold">
+                  <p className=" break-words text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl text-white font-bold font-mono">
                     {question}
                   </p>
                 </div>
@@ -138,7 +142,7 @@ function App() {
             }}
           >
             <div className="grid  place-items-center">
-              <FaInstagramSquare className="text-8xl text-white hover:animate-skip ease-in-out" />
+              <FaInstagramSquare className="text-5xl sm:text-6xl md:text-7xl lg:text-10xl xl:text-12xl text-white transform transition-all hover:animate-skip ease-in-out" />
             </div>
           </div>
           <div
@@ -153,7 +157,7 @@ function App() {
             }}
           >
             <div className="grid place-items-center">
-              <FaLinkedin className="text-8xl text-white content-center hover:animate-skip ease-in-out" />
+              <FaLinkedin className="text-5xl sm:text-6xl md:text-7xl lg:text-10xl xl:text-12xl text-white content-center transform transition-all hover:animate-skip ease-in-out" />
             </div>
           </div>
           <div
