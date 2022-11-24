@@ -67,30 +67,29 @@ function App() {
             </p>
           </div>
           <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
-            <img
-              className="h-32 p-4 hover:animate-skip"
-              src="./java.svg"
-              alt="Java"
-            />
-          </div>
-          <div className="bg-[#432818] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
-            <div className="grid place-items-center">
-              <img
-                className="h-32 p-4 hover:animate-skip "
-                src="./python.svg"
-                alt="Python"
-              />
-            </div>
-          </div>
-          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all flex items-center justify-center">
-            <div className="grid place-items-center">
+            <div className="item-center">
               <img
                 className="h-32 p-4 hover:animate-skip"
-                src="./c++.svg"
-                alt="C++"
+                src="./java.svg"
+                alt="Java"
               />
             </div>
           </div>
+          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
+            <img
+              className="h-32 p-4 hover:animate-skip"
+              src="./python.svg"
+              alt="Python"
+            />
+          </div>
+          <div className="bg-[#6F1D1B] text-white col-span-1 row-span-8 grid place-items-center hover:scale-110 transition-all">
+            <img
+              className="h-32 p-4 hover:animate-skip"
+              src="./C++.svg"
+              alt="C++"
+            />
+          </div>
+
           <div
             className="bg-[#FFE6A7] col-span-3 row-span-5 grid place-items-center hover:scale-110 hover:cursor-pointer transition-all ease-in-out"
             onClick={(e) => {
@@ -138,7 +137,8 @@ function App() {
             className="bg-[#6F1D1B] grid items-center hover:scale-110 hover:cursor-pointer transition-all ease-in-out"
             onClick={(e) => {
               e.preventDefault();
-              window.location.href = "https://www.instagram.com/girltechgeek/";
+              window.location.href =
+                "https://instagram.com/girltechgeek?igshid=YWJhMjlhZTc=";
             }}
           >
             <div className="grid  place-items-center">
